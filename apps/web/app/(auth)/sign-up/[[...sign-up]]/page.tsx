@@ -1,8 +1,8 @@
-import { SignUp } from "@clerk/nextjs";
+import { SignUpViews } from "@/modules/auth/ui/views/sign-up-views";
 
 const Page = () => {
     return ( 
-        <SignUp/>
+        <SignUpViews/>
      );
 }
  

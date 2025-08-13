@@ -13,10 +13,17 @@ export const add = mutation({
     handler: async (ctx) => {
 
         const identity = await ctx.auth.getUserIdentity();
-        console.log("identity", identity);
+
         if(identity === null){
             throw new Error("You must be authenticated to add a user.");
         }
+
+        const orgId = identity.org_id as string
+
+        if(!orgId){
+            
+        }
+
         const userId = await ctx.db.insert("users", {
             name: "febrian nugraha"
         })
